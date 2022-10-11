@@ -1,0 +1,130 @@
+things needed for
+
+users:
+user_id,
+first_name,
+last_name,
+email,
+password
+
+recipes:
+recipe_id,
+recipe_name,
+recipe_type,
+user_id,
+
+
+Ingredients:
+Ingredients_id,
+Ingredients_body,
+recipe_id
+
+
+instructions:
+instructions_id,
+recipe_id,
+instructions_body
+
+user_grocery_list:
+user_grocery_list_id,
+grocery_list_items,
+user_id,
+recipe_id
+
+
+
+occasions:
+occasions_id,
+occasions_name,
+occasions_text,
+user_id,
+recipe_id,
+
+
+TABLE IDEAS
+
+Users: this will contain the user informations, and this information will be unique to each user.
+
+Recipe: this will contain the users recipes
+
+Ingredients: this will be the Ingredients needed for the recipe by the user
+
+instructions: this will contain the guides on using the ingredients to make the recipes.
+
+User Grocery List: this will be the table that contains the grocery list items of the user and the user will be able to add ingredients from recipes to their list.
+
+Occasions: this will be the table for occasions which will contain the occasion name, the occasion text, the user making the occasion, the recipe added to the occasion.
+
+
+RELATIONSHIPS
+
+ONE FOR ONE
+
+
+ONE TO MANY
+users => recipe  : users will have recipes
+recipe => ingredients : recipes will have ingredients
+recipe => instructions: recipe will have instructions
+user =>instructions : users will have instructions
+user => occasion : users will have occasions
+occasion => recipe : occasion will have recipes
+user => grocery_list : users will have grocery list
+grocery_list => recipe : grocery will have recipe
+
+
+
+MANY TO MANY
+
+
+COLUMNS
+
+
+users TABLE
+
+user_id : each user is unique hence the id.
+first_name: each user can be identified by their first name
+last_name: each user can be identified by thier last name
+email: each user email is needed to log onto the app
+password: each user needs their password to complete their login
+
+recipes TABLE
+recipe_id: each recipe is unique hence the id.
+recipe_name: each recipe needs to have a name its called by.
+recipe_type: this is to signify if the recipe is public or private
+user_id: each recipe is unique to the user who wrote them.
+
+
+Ingredients TABLE
+
+Ingredients_id: each ingredient is unique hence the id
+Ingredients_body: this contains the needed ingredients for the recipe
+recipe_id: the ingredients are needed for recipes hence the recipe id link.
+
+
+instructions TABLE
+
+instructions_id: same reason for all id.
+instructions_body: each recipe needs a details instruction on how its made.
+recipe_id: the link between the instruction and the recipe being explained.
+
+
+grocery_list TABLE
+
+user_grocery_list_id: same  reason for all id
+grocery_list_items: each grocery list hold items inputer by the user.
+user_id: each grocery list is unique to its user.
+recipe_id: recipes can be added to the grocery list hence the link.
+
+
+occasions TABLE
+
+occasions_id: same reason for all id
+occasions_name: the occasion can be identified by its name.
+occasions_text: the body of the occasion.
+user_id: the occasion is unique to the user posting it.
+recipe_id: recipes can be added to the occasion being posted.
+
+
+
+
+
